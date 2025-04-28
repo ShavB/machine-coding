@@ -16,24 +16,24 @@ export default function Sidebar({ isOpenMenu, setIsOpenMenu, menuRef }) {
 
   return (
     <div
-      className={`absolute ${
+      className={`fixed ${
         isOpenMenu ? "" : "hidden"
-      } h-screen overflow-auto top-0 w-52 md:w-80 lg:w-72 xl:w-96 2xl:w-[500px] 2xl:text-3xl left-0 z-50 bg-stone-800`}
+      } top-0 h-screen w-52 sm:w-52 md:w-72 lg:w-96 xl:w-96 2xl:w-[500px] 2xl:text-3xl left-0 z-50 bg-stone-800`}
     >
       <div className="w-full h-20 flex items-center justify-between p-4">
         <div className="">Machine coding</div>
-        <X onClick={() => setIsOpenMenu(false)} />
+        <X onClick={() => setIsOpenMenu(false)} className="cursor-pointer" />
       </div>
-      <div className="p-4 flex flex-col gap-6 overflow-auto">
-        {SidebarMenuItems.map((menuItem) => (
-          <div
-            key={menuItem.id}
-            className="bg-gray-700 flex justify-between items-center p-4 rounded-2xl"
-          >
-            {menuItem.item.label}
-          </div>
-        ))}
+        <div className="p-4 flex flex-col gap-6 overflow-y-scroll no-scrollbar h-[calc(100%-5rem)]">
+          {SidebarMenuItems.map((menuItem) => (
+            <div
+              key={menuItem.id}
+              className="bg-gray-700 cursor-pointer flex justify-between items-center p-4 rounded-2xl"
+            >
+              {menuItem.item.label}
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
   );
 }
