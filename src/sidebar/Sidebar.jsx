@@ -1,5 +1,5 @@
 import { X } from "lucide-react";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { SidebarMenuItems } from "../constants/SidebarMenuItems";
 
 export default function Sidebar({ isOpenMenu, setIsOpenMenu, menuRef }) {
