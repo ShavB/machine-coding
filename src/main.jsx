@@ -7,7 +7,7 @@ import { Route } from "react-router";
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<App />} />
+      <Route index element={<App />} />
     </Routes>
   </BrowserRouter>
 );

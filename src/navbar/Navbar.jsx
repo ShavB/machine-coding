@@ -8,7 +8,7 @@ export default function Navbar() {
   let menuRef = useRef(null);
   return (
     <>
-      <div className="fixed top-3 ml-5 sm:ml-8 md:ml-9 lg:ml-13 xl:ml-17 2xl:ml-30 rounded-4xl shadow-2xl border-0 w-[91%] h-20 flex items-center justify-between p-6 z-40 bg-stone-900">
+      <div className="fixed top-3 ml-5 sm:ml-10 md:ml-10 lg:ml-13 xl:ml-10 2xl:ml-22 rounded-4xl shadow-2xl border-0 w-[91%] h-20 flex items-center justify-between p-6 z-40 bg-stone-900">
         <Menu
           onClick={() => setIsOpenMenu(true)}
           className="cursor-pointer ml-6 h-12 w-12"
