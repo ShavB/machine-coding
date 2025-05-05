@@ -12,7 +12,7 @@ pipeline{
         // git url:'https://github.com/ShavB/machine-coding', branch: "main"
       }
     }
-    state('Build and Test'){
+    stage('Build and Test'){
       steps{
         sh 'ls -ltr'
       }
