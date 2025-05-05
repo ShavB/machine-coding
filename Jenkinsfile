@@ -1,7 +1,7 @@
 pipeline{
   agent {
     docker {
-      image "shavbb/react-machine-coding"
+      image "shavbb/react-machine-coding:v1"
       args '--user root -v /var/run/docker.sock:/var/run/docker.sock'
     }
   }
